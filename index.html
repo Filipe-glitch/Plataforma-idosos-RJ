@@ -1,72 +1,60 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portal Digital da Terceira Idade | Rio de Janeiro</title>
+    <title>Viver60 | Portal Digital da Terceira Idade</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"">
 </head>
+
 <body>
-
-    <!-- BARRA DE ACESSIBILIDADE FIXA -->
-    <header class="top-accessibility">
-        <div class="container accessibility-content">
-            <span>Recursos de acessibilidade</span>
-            <div class="accessibility-buttons">
-                <button id="btn-increase-font" aria-label="Aumentar texto">A+</button>
-                <button id="btn-decrease-font" aria-label="Diminuir texto">A-</button>
-                <button id="btn-toggle-contrast" aria-label="Alternar Alto Contraste">◐ Contraste</button>
+    <!-- Header -->
+    <header class=" hero-header">
+    <div class="container">
+        <nav>
+            <div class="logo-box">
+                <img src="assets/logo_idoso.png" alt="Logo Viver60" class="logo-img">
             </div>
-        </div>
-    </header>
 
-    <!-- Navegação -->
-    <nav class="main-nav">
-        <div class="container nav-content">
-            <div class="title-area">
-                <div>
-                    <strong>Portal Digital da Terceira Idade</strong>
-                </div>
-            </div>
-            <ul class="nav-links">
-                <li><a href="#inicio">Início</a></li>
+            <ul class="ul">
+                <li><a href="#emergencias">Emergências</a></li>
                 <li><a href="#servicos">Serviços</a></li>
                 <li><a href="#seguranca">Segurança</a></li>
                 <li><a href="#lembretes">Lembretes</a></li>
-                <li><a href="#duvidas">Dúvidas</a></li>
-            </ul>
-        </div>
-    </nav>
-
-    <!-- HERO SECTION -->
-    <section id="inicio" class="hero-section">
-        <div class="container hero-grid">
-            <div class="hero-text">
-                <span class="badge">FEITO PARA PESSOAS 60+ NO RIO</span>
-                <h1>Informação segura para viver bem, com autonomia.</h1>
-                <p>Encontre serviços, oficinas, orientações e contatos importantes em um só lugar. Tudo explicado de forma simples, direta e acolhedora.</p>
-                <div class="hero-actions">
-                    <a href="#servicos" class="btn btn-primary">↓ Ver serviços e oficinas</a>
-                    <a href="#emergencias" class="btn btn-outline">Telefones úteis</a>
+                <li><a href="#sugestoes">Sugestões</a></li>
+                <div class="close-icon" onclick="closeMenu()">
+                    <i class="fa fa-times-circle"></i>
                 </div>
+            </ul>
+
+            <div class="menu-icon" onclick="openMenu()">
+                <i class="fa fa-bars"></i>
             </div>
-            <div class="hero-image-box">
-                <img src="assets/idoso_laptop.jpg" alt="Idosos reunidos estudando com notebook" width="500px" height="500px">
+        </nav>
+
+        <section class="banner">
+            <div class="banner-text">
+                <h1>Viver60</h1>
+                <p>Encontre serviços, oficinas, orientações e contatos importantes em um só lugar. Tudo explicado de
+                    forma simples, direta e acolhedora.</p>
             </div>
-        </div>
-    </section>
+        </section>
+
+        <a href="#emergencias" class="scroll-down">
+            <span>Role para ver mais</span>
+            <i class="fa fa-chevron-down"></i>
+        </a>
+    </div>
+    </header>
 
     <!-- Telefones de emergência -->
     <section id="emergencias" class="section-padding">
         <div class="container">
-            <span class="badge-sub">GUARDE ESTES NÚMEROS</span>
             <h2>Ajuda quando você precisar</h2>
-            <p class="subtitle">Toque ou disque o número certo. Em uma emergência, informe seu nome, endereço e o que aconteceu.</p>
-
-            <div class="alert-box">
-                ⚠️ Em risco imediato, ligue 190 ou 192.
-            </div>
-
+            <p class="subtitle">Toque ou disque o número certo. Em uma emergência, informe seu nome, endereço e o que
+                aconteceu.</p>
             <div class="emergency-grid">
                 <a href="tel:192" class="emergency-card">
                     <span class="phone-number">192</span>
@@ -98,11 +86,11 @@
     </section>
 
     <!-- Serviços Públicos e Oficinas -->
-    <section id="servicos" class="section-padding services-bg">
+    <section id="servicos" class="section-service">
         <div class="container">
-            <span class="badge-sub">DIREITOS E OPORTUNIDADES NO RIO</span>
             <h2>Serviços e oficinas para você</h2>
-            <p class="subtitle">Conheça opções gratuitas de aprendizado, apoio jurídico e atividades de convivência perto de você.</p>
+            <p class="subtitle">Conheça opções gratuitas de aprendizado, apoio jurídico e atividades de convivência
+                perto de você.</p>
 
             <div class="services-grid">
                 <!-- Card 1: UERJ / UNATI -->
@@ -111,8 +99,10 @@
                         <span class="tag-category">Educação e Tecnologia</span>
                     </div>
                     <h3>Oficinas Digitais — UNATI / UERJ</h3>
-                    <p>Aulas presenciais de uso do celular, internet, redes sociais e aplicativos no Campus Maracanã.</p>
-                    <a href="https://www.unati.uerj.br/" target="_blank" rel="noopener" class="btn-link">Ver como participar →</a>
+                    <p>Aulas presenciais de uso do celular, internet, redes sociais e aplicativos no Campus Maracanã.
+                    </p>
+                    <a href="https://sgo.nuceh.uerj.br/" target="_blank" rel="noopener" class="btn-link">Ver como
+                        participar </a>
                 </div>
 
                 <!-- Card 2: Prefeitura do Rio -->
@@ -121,8 +111,10 @@
                         <span class="tag-category">Saúde e Lazer</span>
                     </div>
                     <h3>Envelhecimento Saudável — Prefeitura RJ</h3>
-                    <p>Projetos municipais com atividades físicas orientadas, oficinas de memória e encontros comunitários.</p>
-                    <a href="tel:1746" class="btn-link">Consultar pelo 1746 →</a>
+                    <p>Projetos municipais com atividades físicas orientadas, oficinas de memória e encontros
+                        comunitários.</p>
+                    <a href="https://carioca.rio/orgao/secretaria-municipal-do-envelhecimento-saudavel-e-qualidade-de-vida-semesqv/"
+                        class="btn-link">Consultar pelo site </a>
                 </div>
 
                 <!-- Card 3: Defensoria Pública / NEAPI -->
@@ -132,7 +124,7 @@
                     </div>
                     <h3>Apoio Jurídico Especializado — NEAPI</h3>
                     <p>Atendimento gratuito da Defensoria Pública voltado à defesa dos direitos da pessoa idosa.</p>
-                    <a href="tel:129" class="btn-link">Ligar para 129 →</a>
+                    <a href="https://defensoria.rj.def.br/Cidadao/NEAPI" class="btn-link">Agende pelo site </a>
                 </div>
 
                 <!-- Card 4: Ministério Público RJ -->
@@ -141,8 +133,57 @@
                         <span class="tag-category">Guias e Orientações</span>
                     </div>
                     <h3>Guia de Direitos do Idoso — MPRJ</h3>
-                    <p>Material explicativo sobre gratuidade nos transportes, prioridade em atendimentos e benefícios sociais.</p>
-                    <a href="https://www.mprj.mp.br/" target="_blank" rel="noopener" class="btn-link">Acessar cartilha →</a>
+                    <p>Material explicativo sobre gratuidade nos transportes, prioridade em atendimentos e benefícios
+                        sociais.</p>
+                    <a href="https://www.mprj.mp.br/conheca-o-mprj/areas-de-atuacao/pessoa-idosa/livros-cartilhas-e-manuais"
+                        target="_blank" rel="noopener" class="btn-link">Acessar cartilha
+                    </a>
+                </div>
+
+                <!-- Card 5: SescRio -->
+                <div class="service-card">
+                    <div class="service-card-header">
+                        <span class="tag-category">Saúde e lazer</span>
+                    </div>
+                    <h3>Sesc+vida — Sesc RJ</h3>
+                    <p>
+                        Atividades físicas, oficinas de memória, passeios culturais e encontros
+                        de convivência nas unidades do Sesc RJ para promover saúde, bem-estar e autonomia.
+                    </p>
+                    <a href="https://www.sescrio.org.br/pessoas-idosas/" target="_blank" rel="noopener"
+                        class="btn-link">Consulte o site
+                    </a>
+                </div>
+
+                <!-- Card 6: Reabilita 60 -->
+                <div class="service-card">
+                    <div class="service-card-header">
+                        <span class="tag-category">Saúde e lazer</span>
+                    </div>
+                    <h3>Projeto 60+ Reabilita</h3>
+                    <p>
+                        Exercícios orientados, fisioterapia preventiva e treino de equilíbrio
+                        para fortalecer o corpo, evitar quedas e garantir mais independência
+                        no dia a dia.
+                    </p>
+                    <a href="https://www.sescrio.org.br/pessoas-idosas/" target="_blank" rel="noopener"
+                        class="btn-link">Acesse o site
+                    </a>
+                </div>
+
+                <!-- Card 7: Nave do conhecimento -->
+                <div class="service-card">
+                    <div class="service-card-header">
+                        <span class="tag-category">Educação e Tecnologia</span>
+                    </div>
+                    <h3>Nave do Conhecimento — Prefeitura RJ</h3>
+                    <p>
+                        Cursos gratuitos e oficinas práticas de tecnologia e uso do
+                        celular em diversas unidades espalhadas pelo Rio.
+                    </p>
+                    <a href="https://capacitacao.navedoconhecimento.rio/" target="_blank" rel="noopener"
+                        class="btn-link">Acesse o site
+                    </a>
                 </div>
             </div>
         </div>
@@ -152,37 +193,33 @@
     <section id="seguranca" class="section-padding">
         <div class="container hero-grid">
             <div>
-                <span class="badge-sub">PROTEJA SEUS DADOS</span>
-                <h2>Golpe tem pressa. Você não precisa ter.</h2>
-
+                <h2>Segurança Digital</h2>
                 <ul class="tips-list">
-                    <li>✓ Desconfie de mensagens com pressa, ameaça ou promessa de prêmio.</li>
-                    <li>✓ Confirme pedidos de dinheiro ligando para a pessoa por outro número.</li>
-                    <li>✓ Não clique em links recebidos por mensagem. Abra o aplicativo oficial.</li>
+                    <li>Desconfie de mensagens com pressa, ameaça ou promessa de prêmio.</li>
+                    <li>Confirme pedidos de dinheiro ligando para a pessoa por outro número.</li>
+                    <li>Não clique em links recebidos por mensagem. Abra o aplicativo oficial.</li>
+                    <li>Bancos e órgãos públicos não pedem sua senha ou código de segurança por telefone.</li>
                 </ul>
-
-                <div class="warning-card">
-                    <strong>✕ Nunca compartilhe senhas ou códigos</strong>
-                    <p>Bancos e órgãos públicos não pedem sua senha ou código de segurança por telefone.</p>
-                </div>
 
                 <div class="guides-section">
                     <h3>Cartilhas e Orientações Oficiais:</h3>
                     <div class="guides-grid">
-                        <a href="https://meubancoconfiavel.febraban.org.br/" target="_blank" rel="noopener" class="btn-guide">
+                        <a href="https://portal.febraban.org.br/AntiFraude" target="_blank" rel="noopener"
+                            class="btn-guide">
                             📄 Portal de Segurança Febraban
                         </a>
-                        <a href="https://idec.org.br/" target="_blank" rel="noopener" class="btn-guide">
+                        <a href="https://idec.org.br/era-dos-golpes" target="_blank" rel="noopener" class="btn-guide">
                             📖 Guia "Era dos Golpes" (IDEC)
                         </a>
-                        <a href="https://www.gov.br/pf/pt-br" target="_blank" rel="noopener" class="btn-guide">
+                        <a href="https://www.gov.br/pf/pt-br/assuntos/combate-a-crimes-ciberneticos/cartilhas-de-seguranca-da-informacao/cartilhas-de-seguranca"
+                            target="_blank" rel="noopener" class="btn-guide">
                             🛡️ Cartilhas da Polícia Federal
                         </a>
                     </div>
                 </div>
             </div>
             <div class="hero-image-box">
-                <img src="assets/idoso_mechendo_celular.jpg" alt="Idosa usando o celular " width="600px" height="500px">
+                <img src="assets/idoso_mechendo_celular.webp" alt="Idosa usando o celular">
             </div>
         </div>
     </section>
@@ -191,13 +228,15 @@
     <section id="lembretes" class="section-padding reminder-bg">
         <div class="container hero-grid">
             <div>
-                <span class="badge-sub">ORGANIZE SEU DIA</span>
                 <h2>Crie um lembrete simples</h2>
-                <p>Anote uma consulta, atividade ou compromisso. Nós organizamos as informações e você pode salvar direto na sua Google Agenda.</p>
+                <p>Anote uma consulta, atividade ou compromisso. Nós organizamos as informações e você pode salvar
+                    direto na sua Google Agenda.
+                </p>
                 <ul class="step-list">
-                    <li> 1. Preencha os campos ao lado.</li>
-                    <li> 2. Revise a data e o horário.</li>
-                    <li> 3. Toque em "Criar lembrete".</li>
+                    <li> Preencha os campos ao lado.</li>
+                    <li> Revise a data e o horário.</li>
+                    <li> Toque em "Criar lembrete".</li>
+                    <li> Recomendamos que você salve no google agenda após criar o lembrete.</li>
                 </ul>
             </div>
 
@@ -228,24 +267,7 @@
         </div>
     </section>
 
-    <!-- Rodapé -->
-    <footer id="duvidas" class="main-footer">
-        <div class="container footer-content">
-            <div>
-                <h3>Portal Digital da Terceira Idade</h3>
-                <p>Informação acessível, segura e acolhedora para pessoas idosas no Rio de Janeiro.</p>
-            </div>
-            <div>
-                <h4>Fale conosco</h4>
-                <p>📞 1746 — Central da Prefeitura</p>
-                <p>📍 Rio de Janeiro — RJ</p>
-            </div>
-        </div>
-        <div class="footer-alert">
-            Este portal não atende emergências. Em urgência médica, ligue 192. Em situação de perigo, ligue 190.
-        </div>
-    </footer>
-
     <script src="script.js"></script>
-</body>
+    </body>
+
 </html>
