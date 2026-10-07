@@ -28,6 +28,7 @@ body {
 /* Header */
 header.hero-header {
     position: relative;
+    z-index: 10000;
     min-height: 90vh;
     background-image: url('assets/idoso_laptop.jpg');
     background-position: center;
@@ -85,11 +86,38 @@ nav ul li a:hover {
     color: #4f9cf9;
 }
 
-.menu-icon, .close-icon {
+.menu-icon,
+.close-icon {
     display: none;
     color: #ffffff;
     font-size: 24px;
     cursor: pointer;
+}
+
+/* Botão de contraste */
+.contrast-control{
+    display: flex;
+    align-items: center;
+}
+
+#contrast-button{
+    background: transparent;
+    border: 1px solid #ffffff;
+    color: #ffffff;
+    padding: 8px 12px;
+    border-radius: 6px;
+    font-family: "Poppins", sans-serif;
+    font-size: 14px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+#contrast-button:hover,
+#contrast-button:focus{
+    background-color: #ffffff;
+    color: #0f2b5c;
+    outline: 3px solid #ffb74d;
 }
 
 /* Banner */
@@ -138,9 +166,22 @@ nav ul li a:hover {
 }
 
 @keyframes bounce {
-    0%, 20%, 50%, 80%, 100% { transform: translateY(0); }
-    40% { transform: translateY(-8px); }
-    60% { transform: translateY(-4px); }
+
+    0%,
+    20%,
+    50%,
+    80%,
+    100% {
+        transform: translateY(0);
+    }
+
+    40% {
+        transform: translateY(-8px);
+    }
+
+    60% {
+        transform: translateY(-4px);
+    }
 }
 
 /* telefones */
@@ -179,7 +220,7 @@ nav ul li a:hover {
     transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
 }
 
-.emergency-card:hover{
+.emergency-card:hover {
     transform: translateY(-6px);
     box-shadow: 0 12px 24px rgba(0, 0, 0, 0.12);
     border-color: #cbd5e1;
@@ -190,11 +231,11 @@ nav ul li a:hover {
     font-weight: 700;
     color: #0077c5;
     margin-bottom: 4px;
-    
+
 }
 
 /* Serviços */
-.section-service{
+.section-service {
     background-color: #f4f8fb;
     padding: 40px 0;
 }
@@ -224,7 +265,7 @@ nav ul li a:hover {
     transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
 }
 
-.service-card:hover{
+.service-card:hover {
     transform: translateY(-5px);
     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.08);
     border-color: #0284c7;
@@ -270,7 +311,7 @@ nav ul li a:hover {
     display: inline-flex;
     align-items: center;
     gap: 4px;
-    transition: color 0.2s ease, transform 0.2s ease ;
+    transition: color 0.2s ease, transform 0.2s ease;
 }
 
 .btn-link:hover {
@@ -279,7 +320,7 @@ nav ul li a:hover {
 }
 
 /* Segurança */
-.hero-grid{
+.hero-grid {
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 40px;
@@ -322,19 +363,19 @@ nav ul li a:hover {
     transition: background-color 0.2s ease, border-color 0.2s ease, transform 0.1s ease;
 }
 
-.btn-guide:hover{
+.btn-guide:hover {
     background-color: #f8fafc;
     border-color: #0284c7;
 }
 
-.hero-image-box{
+.hero-image-box {
     width: 100%;
     display: flex;
     justify-content: center;
     align-items: flex-start;
 }
 
-.hero-image-box img{
+.hero-image-box img {
     border-radius: 20px;
     width: 100%;
     max-width: 460px;
@@ -344,18 +385,18 @@ nav ul li a:hover {
     box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
 }
 
-/* FORMULÁRIO */
+/* Lembretes */
 .hero-grid {
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 40px;
-    align-items: flex-start; 
+    align-items: flex-start;
 }
 
 .hero-grid h2 {
     font-size: 2.2rem;
     font-weight: 700;
-    margin-top: 0; 
+    margin-top: 0;
     margin-bottom: 16px;
     color: #0f172a;
     line-height: 1.2;
@@ -368,17 +409,20 @@ nav ul li a:hover {
     margin-bottom: 20px;
 }
 
-.step-list, .hero-grid ul {
+.step-list,
+.hero-grid ul {
     padding-left: 20px;
     margin: 0;
 }
 
-.step-list li, .hero-grid ul li {
+.step-list li,
+.hero-grid ul li {
     margin-bottom: 10px;
     font-size: 1rem;
     color: #1e293b;
     line-height: 1.5;
 }
+
 .form-card {
     background: #ffffff;
     padding: 30px;
@@ -433,9 +477,10 @@ nav ul li a:hover {
     width: 100%;
 }
 
-.btn-primary, .btn-full {
+.btn-primary,
+.btn-full {
     width: 100%;
-    background-color: #0284c7; 
+    background-color: #0284c7;
     color: #ffffff;
     border: none;
     padding: 14px 20px;
@@ -450,14 +495,222 @@ nav ul li a:hover {
     transition: background-color 0.2s ease, transform 0.1s ease;
 }
 
-.btn-primary:hover, .btn-full:hover {
-    background-color: #0369a1; 
+.btn-primary:hover,
+.btn-full:hover {
+    background-color: #0369a1;
 }
 
-.btn-primary:active, .btn-full:active {
+.btn-primary:active,
+.btn-full:active {
     transform: scale(0.98);
 }
 
+/* Secção do Feedback */
+.feedback-section {
+    padding: 60px 40px;
+    background-color: #f4f7f9;
+}
+
+.feedback-section .container {
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.feedback-card {
+    background-color: #ffffff;
+    border-radius: 16px;
+    padding: 48px 32px;
+    text-align: center;
+    border: 1px solid #e1e8ed;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.06);
+}
+
+.feedback-content h2 {
+    font-size: 2.2rem;
+    font-weight: 700;
+    color: #111827;
+    margin-bottom: 14px;
+}
+
+.feedback-content p {
+    font-size: 1.15rem;
+    color: #4b5563;
+    max-width: 650px;
+    margin: 0 auto 32px auto;
+    line-height: 1.6;
+}
+
+.btn-feedback {
+    display: inline-block;
+    background-color: #0088cc;
+    color: #ffffff;
+    font-size: 1.2rem;
+    font-weight: 600;
+    padding: 16px 40px;
+    border-radius: 8px;
+    text-decoration: none;
+    transition: transform 0.2s ease, background-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.btn-feedback:hover,
+.btn-feedback:focus {
+    background-color: #006699;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 15px rgba(0, 136, 204, 0.3);
+    outline: 3px solid #ffb74d;
+}
+
+/* MODO DE ALTO CONTRASTE */
+
+body.high-contrast{
+    background-color: #000000;
+    color: #ffffff;
+}
+
+body.high-contrast h1,
+body.high-contrast h2,
+body.high-contrast h3,
+body.high-contrast p,
+body.high-contrast li,
+body.high-contrast .subtitle{
+    color: #ffffff;
+}
+
+/* Cabeçalho */
+
+body.high-contrast header.hero-header{
+    background-image: linear-gradient(rgba(0, 0, 0, 0.85)), url(assets/idoso_laptop.jpg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+body.high-contrast header.hero-header::before{
+    display: none;
+}
+
+/* logo */
+body.high-contrast img:not(.logo-img){
+    border: 2px solid #ffffff;
+}
+
+body.high-contrast .logo-img {
+    border: none;
+}
+
+/* Navegação */
+body.high-contrast nav ul li a{
+    color: #ffffff;
+}
+
+body.high-contrast nav ul li a:hover{
+    color: #ffff00;
+}
+
+/* Seções */
+body.high-contrast .section-padding,
+body.high-contrast .section-service,
+body.high-contrast .feedback-section {
+    background-color: #000000;
+}
+
+/* Cards */
+
+body.high-contrast .emergency-card,
+body.high-contrast .service-card,
+body.high-contrast .form-card,
+body.high-contrast .feedback-card,
+body.high-contrast .btn-guide {
+    background-color: #ffffff;
+    color: #000000;
+    border-color: #ffffff;
+}
+
+body.high-contrast .feedback-card h2,
+body.high-contrast .feedback-card p,
+body.high-contrast .form-card h3{
+    color: #000000;
+}
+
+body.high-contrast .emergency-card strong,
+body.high-contrast .emergency-card small,
+body.high-contrast .service-card h3,
+body.high-contrast .service-card p,
+body.high-contrast .btn-guide {
+    color: #000000;
+}
+
+/* Números de emergência */
+
+body.high-contrast .btn-link{
+    color: #0000ee;
+}
+
+body.high-contrast .btn-link:hover{
+    color: #0000aa;
+}
+
+/* Formulário */ 
+body.high-contrast .form-group label{
+    color: #000000;
+}
+
+body.high-contrast .form-group input{
+    background-color: #ffffff;
+    color: #000000;
+    border-color: #ffffff;
+}
+
+/* Botões */
+body.high-contrast .btn-primary,
+body.high-contrast .btn-full {
+    background-color: #ffff00;
+    color: #000000;
+}
+
+body.high-contrast .btn-primary:hover,
+body.high-contrast .btn-full:hover {
+    background-color: #ffffff;
+    color: #000000;
+}
+
+/* Botão de contraste */
+body.high-contrast #contrast-button{
+    background-color: #ffff00;
+    color: #000000;
+    border-color: #ffff00;
+}
+
+/* Imagens */
+body.high-contrast img{
+    border: 2px solid #ffffff;
+}
+
+/* botão de sugestão */
+body.high-contrast .btn-feedback {
+    background-color: #ffff00;
+    color: #000000;
+    font-weight: 700;
+    border: 2px solid #ffff00;
+}
+
+body.high-contrast .btn-feedback:hover {
+    background-color: #ffffff;
+    color: #000000;
+    border-color: #ffffff;
+}
+
+/* segurança - animação(botões) */
+body.high-contrast .btn-guide{
+    transition: transform 0.2s ease, border-color 0.2s ease, background-colos 0.2s ease;
+}
+
+body.high-contrast .btn-guide:hover{
+    transform: translateY(-3px);
+    border-color: #ffff00;
+    background-color: #ffffff;
+    color: #000000;
+}
 
 /* RESPONSIVIDADE PARA MENU MOBILE */
 @media (max-width: 768px) {
@@ -478,7 +731,7 @@ nav ul li a:hover {
         align-items: center;
         gap: 20px;
         transition: right 0.4s ease;
-        z-index: 9999;
+        z-index: 10001;
         box-shadow: -4px 0 12px rgba(0, 0, 0, 0.3);
     }
 
@@ -500,21 +753,21 @@ nav ul li a:hover {
         font-size: 42px;
     }
 
-    .hero-grid{
+    .hero-grid {
         grid-template-columns: 1fr;
         gap: 30px;
     }
 
-    .hero-grid-box{
+    .hero-grid-box {
         order: -1;
     }
 
-    .hero-image-box img{
+    .hero-image-box img {
         max-width: 100%;
         border-radius: 12px;
     }
 
-    .btn-guide{
+    .btn-guide {
         padding: 16px;
         font-size: 1rem;
     }
@@ -522,5 +775,30 @@ nav ul li a:hover {
     .form-row {
         grid-template-columns: 1fr;
         gap: 10px;
+    }
+
+    .feedback-section {
+        padding: 40px 16px;
+    }
+
+    .feedback-card {
+        padding: 32px 20px;
+        border-radius: 12px;
+    }
+
+    .feedback-content h2 {
+        font-size: 1.75rem;
+    }
+
+    .feedback-content p {
+        font-size: 1rem;
+        margin-bottom: 24px;
+    }
+
+    .btn-feedback {
+        width: 100%;
+        box-sizing: border-box;
+        padding: 14px 20px;
+        font-size: 1.1rem;
     }
 }

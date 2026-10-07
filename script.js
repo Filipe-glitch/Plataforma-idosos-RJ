@@ -1,3 +1,13 @@
+// Abre o menu mobile
+function openMenu() {
+    document.querySelector('nav .ul').classList.add('open');
+}
+
+// Fecha o menu mobile
+function closeMenu() {
+    document.querySelector('nav .ul').classList.remove('open');
+}
+
 // função para fechar o menu quando o usuário clica em algo 
 document.querySelectorAll('nav .ul a').forEach(link => {
     link.addEventListener('click', () => {
@@ -5,22 +15,33 @@ document.querySelectorAll('nav .ul a').forEach(link => {
     });
 });
 
+/* Função de botão do contraste*/ 
+function toggleContrast(){
+    document.body.classList.toggle("high-contrast");
+
+    const button = document.getElementById("contrast-button");
+    if(document.body.classList.contains("high-contrast")){
+        button.textContent = "◐ Contraste normal";
+    }
+    else{
+        button.textContent = "◐ Alto contraste";
+    }
+}
+
+/* Lembrete + agenda google*/ 
 document.getElementById("reminder-form").addEventListener("submit", function (e) {
     e.preventDefault();
 
     const title = document.getElementById("reminder-title").value;
-    const date = document.getElementById("reminder-date").value; // AAAA-MM-DD
-    const time = document.getElementById("reminder-time").value; // HH:MM
-
-    // Formata a data para exibição brasileira (DD/MM/AAAA)
+    const date = document.getElementById("reminder-date").value; 
+    const time = document.getElementById("reminder-time").value; 
+    
     const [year, month, day] = date.split("-");
     const dataBR = `${day}/${month}/${year}`;
-
-    // Cria os objetos de data para calcular 1h de duração com precisão
+    
     const start = new Date(`${date}T${time}:00`);
     const end = new Date(start.getTime() + 60 * 60 * 1000);
 
-    // Converte para ISO string sem pontuações (AAAAMMDDTHHMMSS)
     const toISO = (d) => d.toISOString().replace(/[-:]/g, "").split(".")[0];
 
     const calendarUrl = `https://calendar.google.com/calendar/render?action=TEMPLATE&text=${encodeURIComponent(title)}&dates=${toISO(start)}/${toISO(end)}&details=${encodeURIComponent("Lembrete criado via Portal Digital da Terceira Idade RJ")}`;
