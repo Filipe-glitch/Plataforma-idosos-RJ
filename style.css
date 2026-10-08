@@ -30,7 +30,7 @@ header.hero-header {
     position: relative;
     z-index: 10000;
     min-height: 90vh;
-    background-image: url('assets/idoso_laptop.jpg');
+    background-image: url('assets/idoso_laptop.webp');
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
