@@ -579,7 +579,7 @@ body.high-contrast .subtitle{
 /* Cabeçalho */
 
 body.high-contrast header.hero-header{
-    background-image: linear-gradient(rgba(0, 0, 0, 0.85)), url(assets/idoso_laptop.jpg);
+    background-image: linear-gradient(rgba(0, 0, 0, 0.85)), url(assets/idoso_laptop.webp);
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
