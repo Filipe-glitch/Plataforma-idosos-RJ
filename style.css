@@ -560,6 +560,104 @@ nav ul li a:hover {
     outline: 3px solid #ffb74d;
 }
 
+/* Footer */
+
+footer {
+    background-color: #0f2b5c;
+    color: #ffffff;
+    padding: 50px 0 20px;
+    margin-top: 40px;
+}
+
+.footer-container {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 0 5%;
+}
+
+.footer-content {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 40px;
+    margin-bottom: 40px;
+}
+
+.footer-brand p {
+    color: #cbd5e1;
+    font-size: 0.95rem;
+    margin-top: 15px;
+    line-height: 1.6;
+}
+
+.footer-logo-img {
+    height: 55px;
+    width: auto;
+    border-radius: 6px;
+    background-color: #ffffff;
+    padding: 4px;
+    object-fit: contain;
+}
+
+.footer-links h4,
+.footer-social h4 {
+    color: #ffffff;
+    font-size: 1.15rem;
+    font-weight: 600;
+    margin-bottom: 16px;
+}
+
+.footer-links ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-links ul li {
+    margin-bottom: 10px;
+}
+
+.footer-links ul li a {
+    color: #cbd5e1;
+    font-size: 0.95rem;
+    transition: color 0.2s ease;
+}
+
+.footer-links ul li a:hover {
+    color: #4f9cf9;
+    text-decoration: underline;
+}
+
+.social-links {
+    display: flex;
+    gap: 15px;
+}
+
+.footer-social-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 46px;
+    height: 46px;
+    background-color: rgba(255, 255, 255, 0.1);
+    color: #ffffff;
+    border-radius: 50%;
+    font-size: 1.25rem;
+    transition: background-color 0.2s ease, transform 0.2s ease;
+}
+
+.footer-social-btn:hover {
+    background-color: #0284c7;
+    color: #ffffff;
+    transform: translateY(-3px);
+}
+
+.footer-copyright {
+    border-top: 1px solid rgba(255, 255, 255, 0.15);
+    padding-top: 20px;
+    text-align: center;
+    color: #94a3b8;
+    font-size: 0.9rem;
+}
+
 /* MODO DE ALTO CONTRASTE */
 
 body.high-contrast{
@@ -711,6 +809,40 @@ body.high-contrast .btn-guide:hover{
     background-color: #ffffff;
     color: #000000;
 }
+
+/* footer */
+body.high-contrast footer {
+    background-color: #000000;
+    border-top: 2px solid #ffffff;
+}
+
+body.high-contrast .footer-brand p,
+body.high-contrast .footer-links ul li a,
+body.high-contrast .footer-copyright {
+    color: #ffffff;
+}
+
+body.high-contrast .footer-logo-img {
+    background-color: #ffffff;
+    border: 2px solid #ffff00;
+}
+
+body.high-contrast .footer-links ul li a:hover {
+    color: #ffff00;
+}
+
+body.high-contrast .footer-social-btn {
+    background-color: #ffff00;
+    color: #000000;
+    border: 1px solid #ffff00;
+}
+
+body.high-contrast .footer-social-btn:hover {
+    background-color: #ffffff;
+    color: #000000;
+    border-color: #ffffff;
+}
+
 
 /* RESPONSIVIDADE PARA MENU MOBILE */
 @media (max-width: 768px) {

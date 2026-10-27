@@ -7,52 +7,52 @@
     <title>Viver60 | Portal Digital da Terceira Idade</title>
     <link rel="icon" type="image/png" href="assets/logo_idoso.png">
     <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 
 <body>
     <!-- Header -->
     <header class=" hero-header">
-    <div class="container">
-        <nav>
-            <div class="logo-box">
-                <img src="assets/logo_idoso.png" alt="Logo Viver60" class="logo-img">
-            </div>
-
-            <ul class="ul">
-                <li><a href="#emergencias">Emergências</a></li>
-                <li><a href="#servicos">Serviços</a></li>
-                <li><a href="#seguranca">Segurança</a></li>
-                <li><a href="#lembretes">Lembretes</a></li>
-                <li><a href="#sugestoes">Sugestões</a></li>
-                <li class="contrant-control">
-                    <button type="button" id="contrast-button" onclick="toggleContrast()">
-                        ◐ Alto contraste
-                    </button>
-                </li>
-                <div class="close-icon" onclick="closeMenu()">
-                    <i class="fa fa-times-circle"></i>
+        <div class="container">
+            <nav>
+                <div class="logo-box">
+                    <img src="assets/logo_idoso.png" alt="Logo Viver60" class="logo-img">
                 </div>
-            </ul>
 
-            <div class="menu-icon" onclick="openMenu()">
-                <i class="fa fa-bars"></i>
-            </div>
-        </nav>
+                <ul class="ul">
+                    <li><a href="#emergencias">Emergências</a></li>
+                    <li><a href="#servicos">Serviços</a></li>
+                    <li><a href="#seguranca">Segurança</a></li>
+                    <li><a href="#lembretes">Lembretes</a></li>
+                    <li><a href="#sugestoes">Sugestões</a></li>
+                    <li class="contrant-control">
+                        <button type="button" id="contrast-button" onclick="toggleContrast()">
+                            ◐ Alto contraste
+                        </button>
+                    </li>
+                    <div class="close-icon" onclick="closeMenu()">
+                        <i class="fa fa-times-circle"></i>
+                    </div>
+                </ul>
 
-        <section class="banner">
-            <div class="banner-text">
-                <h1>Viver60</h1>
-                <p>Encontre serviços, oficinas, orientações e contatos importantes em um só lugar. Tudo explicado de
-                    forma simples, direta e acolhedora.</p>
-            </div>
-        </section>
+                <div class="menu-icon" onclick="openMenu()">
+                    <i class="fa fa-bars"></i>
+                </div>
+            </nav>
 
-        <a href="#emergencias" class="scroll-down">
-            <span>Role para ver mais</span>
-            <i class="fa fa-chevron-down"></i>
-        </a>
-    </div>
+            <section class="banner">
+                <div class="banner-text">
+                    <h1>Viver60</h1>
+                    <p>Encontre serviços, oficinas, orientações e contatos importantes em um só lugar. Tudo explicado de
+                        forma simples, direta e acolhedora.</p>
+                </div>
+            </section>
+
+            <a href="#emergencias" class="scroll-down">
+                <span>Role para ver mais</span>
+                <i class="fa fa-chevron-down"></i>
+            </a>
+        </div>
     </header>
 
     <!-- Telefones de emergência -->
@@ -274,6 +274,7 @@
         </div>
     </section>
 
+    <!-- Feedback dos usuários -->
     <section id="sugestoes" class="feedback-section">
         <div class="container">
             <div class="feedback-card">
@@ -292,7 +293,55 @@
         </div>
     </section>
 
+    <footer>
+        <div class="footer-container">
+            <div class="footer-content">
+                <!-- Coluna 1: Sobre / Logo -->
+                <div class="footer-brand">
+                    <div class="logo-box">
+                        <img src="assets/logo_idoso.png" alt="Logo Viver60" class="footer-logo-img">
+                    </div>
+                    <p>Portal de inclusão digital e serviços para a terceira idade no Rio de Janeiro.</p>
+                </div>
+
+                <!-- Coluna 2: Links Rápidos de Navegação -->
+                <div class="footer-links">
+                    <h4>Navegação</h4>
+                    <ul>
+                        <li><a href="#emergencias">Emergências</a></li>
+                        <li><a href="#servicos">Serviços e Oficinas</a></li>
+                        <li><a href="#seguranca">Segurança Digital</a></li>
+                        <li><a href="#lembretes">Lembretes</a></li>
+                        <li><a href="#sugestoes">Avaliação e Sugestões</a></li>
+                    </ul>
+                </div>
+
+                <!-- Coluna 3: Contato e Redes Sociais -->
+                <div class="footer-social">
+                    <h4>Nossos Contatos</h4>
+                    <div class="social-links">
+                        <a href="https://www.linkedin.com/in/filipe-rocha-tech/" target="_blank"
+                            rel="noopener noreferrer" class="footer-social-btn" aria-label="LinkedIn">
+                            <i class="fa-brands fa-linkedin-in"></i>
+                        </a>
+                        <a href="https://wa.me/5521968757740" target="_blank" rel="noopener noreferrer"
+                            class="footer-social-btn" aria-label="WhatsApp">
+                            <i class="fa-brands fa-whatsapp"></i>
+                        </a>
+                        <a href="mailto:filipe.devrocha@gmail.com" target="_blank" rel="noopener noreferrer"
+                            class="footer-social-btn" aria-label="E-mail">
+                            <i class="fa-regular fa-envelope"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="footer-copyright">
+                <p>&copy; 2026 Viver60 — Todos os direitos reservados.</p>
+            </div>
+        </div>
+    </footer>
     <script src="script.js"></script>
-    </body>
+</body>
 
 </html>

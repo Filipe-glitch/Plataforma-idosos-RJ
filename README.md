@@ -57,3 +57,7 @@ viver60/
 **Curso:** Análise e Desenvolvimento de Sistemas
 
 O projeto busca aplicar conhecimentos de desenvolvimento web, UX/UI e acessibilidade em uma solução com propósito social.
+
+---
+
+Desenvolvido por **Filipe Rocha**.
