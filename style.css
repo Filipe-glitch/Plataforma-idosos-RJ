@@ -756,7 +756,7 @@ body.high-contrast .form-group label{
 body.high-contrast .form-group input{
     background-color: #ffffff;
     color: #000000;
-    border-color: #ffffff;
+    border-color: 2px solid #000000
 }
 
 /* Botões */
@@ -764,12 +764,14 @@ body.high-contrast .btn-primary,
 body.high-contrast .btn-full {
     background-color: #ffff00;
     color: #000000;
+    border: 2px solid #000000;
 }
 
 body.high-contrast .btn-primary:hover,
 body.high-contrast .btn-full:hover {
-    background-color: #ffffff;
-    color: #000000;
+    background-color: #000000;
+    color: #ffff00;
+    border-color: #000000;
 }
 
 /* Botão de contraste */
