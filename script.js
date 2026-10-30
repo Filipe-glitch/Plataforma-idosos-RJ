@@ -1,11 +1,13 @@
 // Abre o menu mobile
 function openMenu() {
     document.querySelector('nav .ul').classList.add('open');
+    document.body.style.overflow = 'hidden';
 }
 
 // Fecha o menu mobile
 function closeMenu() {
     document.querySelector('nav .ul').classList.remove('open');
+    document.body.style.overflow = '';
 }
 
 // função para fechar o menu quando o usuário clica em algo 
